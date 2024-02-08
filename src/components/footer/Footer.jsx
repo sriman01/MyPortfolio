@@ -154,7 +154,7 @@ export default function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              <a href="tel:+1234567890,,123">+91 9905497178</a>
+              <a href="tel:+919905497178">+91 9905497178</a>
             </p>
           </div>
         </div>
