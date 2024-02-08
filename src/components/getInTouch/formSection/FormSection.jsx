@@ -12,7 +12,7 @@ const FormSection = () => {
     e.preventDefault();
     console.log(formData);
     const { name, email, subject, message } = formData;
-    const mailtoLink = `mailto:sriman01.ugcs20@iiitranchi.ac.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`)}`;
+    const mailtoLink = `mailto:srimankumar45@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`)}`;
     window.location.href = mailtoLink;
   };
 
