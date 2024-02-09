@@ -17,6 +17,7 @@ function App() {
         <section id="hero">
           <Hero />
         </section>
+        <div className=" bg-[#FCFAFA] h-20 flex items-center justify-center font-bold text-lg  xl:text-2xl"><span className=" text-yellow-500">#OPEN</span>TOWORK</div>
          <section id="skill">
           <Skill />
         </section>
