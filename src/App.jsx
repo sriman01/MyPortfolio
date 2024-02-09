@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Skill from "./components/skill/Skill";
+import { motion } from "framer-motion";
 function App() {
   return (
     <>
@@ -14,11 +15,25 @@ function App() {
         <div className="sticky top-0 min-w-full z-50">
           <Navbar />
         </div>
-        <section id="hero">
+        <motion.section
+          variants={{
+            hidden: { opacity: 0, y: -75 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, delay: 0.5 },
+            },
+          }}
+          initial="hidden"
+          animate="visible"
+          id="hero"
+        >
           <Hero />
-        </section>
-        <div className=" bg-[#FCFAFA] h-20 flex items-center justify-center font-bold text-lg  xl:text-2xl"><span className=" text-yellow-500">#OPEN</span>TOWORK</div>
-         <section id="skill">
+          <div className=" bg-[#FCFAFA] h-20 flex items-center justify-center font-bold text-lg  xl:text-2xl">
+            <span className=" text-yellow-500">#OPEN</span>TOWORK
+          </div>
+        </motion.section>
+        <section id="skill">
           <Skill />
         </section>
         <section id="education">
@@ -33,7 +48,7 @@ function App() {
         <section id="contact">
           <GetInTouch />
         </section>
-        <Footer /> 
+        <Footer />
       </div>
     </>
   );

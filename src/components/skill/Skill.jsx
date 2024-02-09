@@ -61,6 +61,7 @@ const skillValue2 = [
   },
 ];
 
+
 const Skill = () => {
   return (
     <div className=" ">
@@ -69,8 +70,8 @@ const Skill = () => {
       </h3>
       <div className=" flex flex-col lg:flex-row items-center lg:justify-around pb-10">
         <div className="  pb-3 w-[80%] sm:[65%] lg:w-[40%] flex flex-col gap-3">
-          {skillValue.map((item) => (
-            <div className=" flex gap-2">
+          {skillValue.map((item, idx) => (
+            <div className=" flex gap-2" key={idx}>
               <div className="text-lg sm:text-xl font-semibold text-white w-[12rem]">
                 {item.name}
               </div>
@@ -84,8 +85,8 @@ const Skill = () => {
           ))}
         </div>
         <div className="  w-[80%] sm:[65%] lg:w-[40%] flex flex-col gap-3">
-          {skillValue2.map((item) => (
-            <div className=" flex gap-2">
+          {skillValue2.map((item, idx) => (
+            <div className=" flex gap-2" key={idx}>
               <div className="text-lg sm:text-xl font-semibold text-white w-[12rem]">
                 {item.name}
               </div>
