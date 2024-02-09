@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
-
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser'
 const FormSection = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  // const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    const { name, email, subject, message } = formData;
-    const mailtoLink = `mailto:srimankumar45@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`)}`;
-    window.location.href = mailtoLink;
+    emailjs
+    .sendForm('service_4vheh95', 'template_0ugxohr', form.current, {
+      publicKey: '0uXzPMe14WlL1Phuf',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+    e.target.reset();
   };
 
   return (
     <div className="px-10 py-8 md:py-12 xl:py-15 2xl:py-20 w-full mx-auto bg-purple-900 bg-opacity-40  md:rounded-r-xl shadow-md ">
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
             Name
@@ -28,8 +34,6 @@ const FormSection = () => {
             id="name"
             type="text"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             required
           />
         </div>
@@ -42,8 +46,6 @@ const FormSection = () => {
             id="email"
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             required
           />
         </div>
@@ -56,8 +58,6 @@ const FormSection = () => {
             id="subject"
             type="text"
             name="subject"
-            value={formData.subject}
-            onChange={handleChange}
             required
           />
         </div>
@@ -69,8 +69,6 @@ const FormSection = () => {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             required
           />
         </div>

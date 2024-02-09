@@ -69,19 +69,19 @@ export default function Navbar() {
               <ClearRoundedIcon onClick={() => setOpenNav(false)} />
             </div>
             <div className=" h-[80%] flex flex-col justify-around items-center ">
-              <a href="#hero" className="nav hover:text-yellow-500 cursor-pointer">
+              <a href="#hero" className="nav hover:text-yellow-500 cursor-pointer" onClick={() => setOpenNav(false)} >
                 Home
               </a>
-              <a href="#skill" className="nav hover:text-yellow-500 cursor-pointer">
+              <a href="#skill" className="nav hover:text-yellow-500 cursor-pointer" onClick={() => setOpenNav(false)} >
                 Skill
               </a>
-              <a href="#education" className="nav hover:text-yellow-500 cursor-pointer">
+              <a href="#education" className="nav hover:text-yellow-500 cursor-pointer" onClick={() => setOpenNav(false)} >
                 Education
               </a>
-              <a href="#projects" className="nav hover:text-yellow-500 cursor-pointer">
+              <a href="#projects" className="nav hover:text-yellow-500 cursor-pointer" onClick={() => setOpenNav(false)} >
                 Projects
               </a>
-              <a href="#contact" className="nav hover:text-yellow-500 cursor-pointer">
+              <a href="#contact" className="nav hover:text-yellow-500 cursor-pointer" onClick={() => setOpenNav(false)} >
                 Contact
               </a>
             </div>
