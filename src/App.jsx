@@ -17,11 +17,11 @@ function App() {
         <section id="hero">
           <Hero />
         </section>
+         <section id="skill">
+          <Skill />
+        </section>
         <section id="education">
           <Education />
-        </section>
-        <section id="skill">
-          <Skill />
         </section>
         <section id="projects">
           <Projects />
@@ -32,7 +32,7 @@ function App() {
         <section id="contact">
           <GetInTouch />
         </section>
-        <Footer />
+        <Footer /> 
       </div>
     </>
   );
