@@ -11,7 +11,7 @@ const AchievementSection = () => {
             <h3 class="text-yellow-500">2024</h3>
             <div href="#" className="text-blue-500 hover:underline cursor-pointer">sriman45</div>
 
-            <p className="text-gray-700 mb-4">Accomplished an impressive 141st position in the first round, followed by securing the 334rd rank in the second round.</p>
+            <p className="text-gray-700 mb-4">Accomplished an impressive 141st position in the first round, followed by securing the 334th rank in the second round.</p>
           </div>
         </div>
 
