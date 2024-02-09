@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Skill from "./components/skill/Skill";
+import Skill2 from "./components/skill2/Skill2";
 function App() {
   return (
     <>
@@ -17,11 +18,11 @@ function App() {
         <section id="hero">
           <Hero />
         </section>
+         <section id="skill">
+          <Skill2 />
+        </section>
         <section id="education">
           <Education />
-        </section>
-        <section id="skill">
-          <Skill />
         </section>
         <section id="projects">
           <Projects />
@@ -32,7 +33,7 @@ function App() {
         <section id="contact">
           <GetInTouch />
         </section>
-        <Footer />
+        <Footer /> 
       </div>
     </>
   );

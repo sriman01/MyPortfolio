@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillsTimeline = () => {
+const Skill = () => {
   return (
     <div className=" flex flex-col justify-center items-center text-center flex-wrap gap-3 bg-[#FCFAFA] pb-10">
          <h3 className="w-full mb-[0.5rem] text-xl sm:text-xl md:text-2xl xl:text-[3rem] font-semibold pt-5 xl:py-10 text-black">Technical <span className='text-yellow-500'>Skills</span></h3>
@@ -131,4 +131,4 @@ const SkillsTimeline = () => {
   );
 };
 
-export default SkillsTimeline;
+export default Skill;
