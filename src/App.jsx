@@ -8,6 +8,44 @@ import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Skill from "./components/skill/Skill";
 import { motion } from "framer-motion";
+
+const scrollVariant = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
+const appearVariant = {
+  hidden: {
+    opacity: 0,
+    x: -200,
+  },
+  visible: {
+    opacity: 1,
+    x:0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+}
+
+const simpleVariant = {
+  hidden: { opacity: 0, y: -75 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, delay: 0.5 },
+  },
+}
+
 function App() {
   return (
     <>
@@ -16,39 +54,52 @@ function App() {
           <Navbar />
         </div>
         <motion.section
-          variants={{
-            hidden: { opacity: 0, y: -75 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1, delay: 0.5 },
-            },
-          }}
+          variants={simpleVariant}
           initial="hidden"
-          animate="visible"
+          animate={"visible"}
           id="hero"
         >
           <Hero />
-          <div className=" bg-[#FCFAFA] h-20 flex items-center justify-center font-bold text-lg  xl:text-2xl">
+          <motion.div className=" bg-[#FCFAFA] h-20 flex items-center justify-center font-bold text-lg  xl:text-2xl" variants={simpleVariant} initial="hidden" whileInView={"visible"}>
             <span className=" text-yellow-500">#OPEN</span>TOWORK
-          </div>
+          </motion.div>
         </motion.section>
-        <section id="skill">
+
+        <motion.section
+          id="skill"
+          variants={scrollVariant}
+          initial="hidden"
+          whileInView={"visible"}
+        >
           <Skill />
-        </section>
-        <section id="education">
+        </motion.section>
+
+        <motion.section id="education" variants={appearVariant} initial="hidden" whileInView={"visible"}>
           <Education />
-        </section>
-        <section id="projects">
+        </motion.section>
+
+
+        <motion.section
+          id="projects"
+          variants={simpleVariant}
+          initial="hidden"
+          whileInView={"visible"}
+        >
           <Projects />
-        </section>
-        <section>
+        </motion.section>
+
+        <motion.section variants={appearVariant} initial="hidden" whileInView={"visible"}>
           <Achievements />
-        </section>
-        <section id="contact">
+        </motion.section>
+
+        <motion.section id="contact" variants={scrollVariant} initial="hidden" whileInView={"visible"}>
           <GetInTouch />
-        </section>
+        </motion.section>
+
+        <motion.section variants={simpleVariant} initial="hidden" whileInView={"visible"}>
+
         <Footer />
+        </motion.section>
       </div>
     </>
   );
