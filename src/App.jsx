@@ -7,7 +7,6 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Skill from "./components/skill/Skill";
-import Skill2 from "./components/skill2/Skill2";
 function App() {
   return (
     <>
@@ -19,7 +18,7 @@ function App() {
           <Hero />
         </section>
          <section id="skill">
-          <Skill2 />
+          <Skill />
         </section>
         <section id="education">
           <Education />
