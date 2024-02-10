@@ -3,6 +3,12 @@ import React from 'react';
 const Projects = () => {
   const galleryItems = [
     {
+      imageUrl: "/project-3.png",
+      projectName: "Realtime Weather App",
+      githubLink: "https://github.com/sriman01/weatherApp",
+      deployLink: "https://sriman-weatherapp.netlify.app/"
+    },
+    {
       imageUrl: "/project-1.png",
       projectName: "SHOP|MART - ecommerse",
       githubLink: "https://github.com/sriman01/shop-mart",
@@ -32,12 +38,7 @@ const Projects = () => {
       githubLink: "https://github.com/sriman01/KHARIDO",
       deployLink: "https://reliable-smakager-72e39d.netlify.app/"
     },
-    {
-      imageUrl: "/project-3.png",
-      projectName: "PATH FINDER",
-      githubLink: "https://github.com/sriman01/minorProject",
-      deployLink: "https://beautiful-gumdrop-15a288.netlify.app/"
-    },
+    
     // Add more gallery items as needed
   ];
 
