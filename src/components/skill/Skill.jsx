@@ -44,7 +44,7 @@ const skillValue2 = [
     value: "80%",
   },
   {
-    name: "HTML",
+    name: "React-Native",
     value: "90%",
   },
   {
