@@ -40,7 +40,7 @@ export default function Hero() {
                     <div className={`md:text-xl text-2xl font-semibold mt-2`}>Build things for Web</div>
                     <div className='flex justify-start'>
                         <div className=' bg-yellow-500 px-4 py-1 font-semibold text-black rounded-2xl mt-1'>
-                            <a href="/resume.pdf" download={'Resume_Sriman.pdf'}>Get Resume</a>
+                            <a href="/ResumeSriman.pdf" download={'Resume_Sriman.pdf'}>Get Resume</a>
                         </div>
                     </div>
                 </div>
