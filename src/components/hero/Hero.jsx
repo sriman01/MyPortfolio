@@ -36,7 +36,7 @@ export default function Hero() {
                         <span className='hand-emoji '>👋</span>
                     </span></div>
                     <div className={`text-3xl sm:text-3xl lg:text-5xl 2xl:text-6xl  font-extrabold`}>I'm <span className=' text-yellow-500'>{name}</span></div>
-                    <div className={`text-2xl sm:text-2xl lg:text-4xl font-bold text-[#DCCFED]`}>A FrontEnd Developer</div>
+                    <div className={`text-2xl sm:text-2xl lg:text-4xl font-bold text-[#DCCFED]`}>A Full Stack Web Developer</div>
                     <div className={`md:text-xl text-2xl font-semibold mt-2`}>Build things for Web</div>
                     <div className='flex justify-start'>
                         <div className=' bg-yellow-500 px-4 py-1 font-semibold text-black rounded-2xl mt-1'>
