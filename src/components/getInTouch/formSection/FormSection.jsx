@@ -1,85 +1,136 @@
 import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser'
-const FormSection = () => {
-  // const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
-  const form = useRef();
+import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+import SendIcon from '@mui/icons-material/Send';
 
+const FormSection = () => {
+  const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
     emailjs
-    .sendForm('service_4vheh95', 'template_0ugxohr', form.current, {
-      publicKey: '0uXzPMe14WlL1Phuf',
-    })
-    .then(
-      () => {
-        console.log('SUCCESS!');
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-      },
-    );
-    e.target.reset();
+      .sendForm('service_4vheh95', 'template_0ugxohr', form.current, {
+        publicKey: '0uXzPMe14WlL1Phuf',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setSubmitStatus('success');
+          setIsSubmitting(false);
+          e.target.reset();
+          setTimeout(() => setSubmitStatus(null), 5000);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setSubmitStatus('error');
+          setIsSubmitting(false);
+          setTimeout(() => setSubmitStatus(null), 5000);
+        },
+      );
   };
 
   return (
-    <div className="px-10 py-8 md:py-12 xl:py-15 2xl:py-20 w-full mx-auto bg-purple-900 bg-opacity-40  md:rounded-r-xl shadow-md ">
-      <form ref={form} onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
-            Name
+    <div className="w-full mx-auto glass-effect rounded-2xl p-8 border border-yellow-500/20">
+      <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block text-white text-sm font-semibold mb-2" htmlFor="name">
+            Your Name
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full py-3 px-4 bg-[#1a1a2e] border border-yellow-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all"
             id="name"
             type="text"
             name="name"
+            placeholder="John Doe"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-white  text-sm font-bold mb-2" htmlFor="email">
-            Email
+        
+        <div>
+          <label className="block text-white text-sm font-semibold mb-2" htmlFor="email">
+            Your Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full py-3 px-4 bg-[#1a1a2e] border border-yellow-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all"
             id="email"
             type="email"
             name="email"
+            placeholder="john@example.com"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="subject">
+        
+        <div>
+          <label className="block text-white text-sm font-semibold mb-2" htmlFor="subject">
             Subject
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full py-3 px-4 bg-[#1a1a2e] border border-yellow-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all"
             id="subject"
             type="text"
             name="subject"
+            placeholder="Project Discussion"
             required
           />
         </div>
-        <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="message">
-            Message
+        
+        <div>
+          <label className="block text-white text-sm font-semibold mb-2" htmlFor="message">
+            Your Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="w-full py-3 px-4 bg-[#1a1a2e] border border-yellow-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all resize-none h-32"
             id="message"
             name="message"
+            placeholder="Tell me about your project..."
             required
           />
         </div>
-        <div className="flex items-center justify-between">
-          <button
-            className="bg-yellow-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
+        
+        <motion.button
+          type="submit"
+          disabled={isSubmitting}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:from-yellow-600 hover:to-yellow-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? (
+            <>
+              <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+              <span>Sending...</span>
+            </>
+          ) : (
+            <>
+              <SendIcon className="w-5 h-5" />
+              <span>Send Message</span>
+            </>
+          )}
+        </motion.button>
+
+        {submitStatus === 'success' && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400 text-center"
           >
-            Send
-          </button>
-        </div>
+            ✓ Message sent successfully! I'll get back to you soon.
+          </motion.div>
+        )}
+
+        {submitStatus === 'error' && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400 text-center"
+          >
+            ✗ Something went wrong. Please try again or contact me directly.
+          </motion.div>
+        )}
       </form>
     </div>
   );
