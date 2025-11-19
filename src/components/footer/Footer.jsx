@@ -23,7 +23,7 @@ export default function Footer() {
     },
     {
       name: "Twitter/X",
-      url: "https://twitter.com/srimankumar45",
+      url: "https://x.com/sriman_codes",
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -93,7 +93,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4 text-lg">Languages</h4>
             <ul className="space-y-2">
-              {["C++", "Python", "JavaScript", "TypeScript"].map((lang, idx) => (
+              {["C++", "Java", "JavaScript", "TypeScript"].map((lang, idx) => (
                 <li key={idx}>
                   <span className="text-gray-400 text-sm hover:text-yellow-500 transition-colors cursor-pointer">
                     {lang}
@@ -129,11 +129,11 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-yellow-500/20">
           <p className="text-gray-400 text-sm">
-            © 2024 <span className="text-yellow-500 font-semibold">Sriman Kumar</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-yellow-500 font-semibold">Sriman Kumar</span>. All rights reserved.
           </p>
-          <p className="text-gray-500 text-xs mt-2">
+          {/* <p className="text-gray-500 text-xs mt-2">
             Built with React, Tailwind CSS & Framer Motion
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

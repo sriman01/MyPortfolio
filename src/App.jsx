@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 import Skill from "./components/skill/Skill";
+import WorkExperience from "./components/workExperience/WorkExperience";
 
 function App() {
   return (
@@ -31,13 +32,17 @@ function App() {
         <Skill />
       </section>
 
+      <section id="experience">
+        <WorkExperience />
+      </section>
+
       <section id="education">
         <Education />
       </section>
 
-      <section id="projects">
+      {/* <section id="projects">
         <Projects />
-      </section>
+      </section> */}
 
       <section id="achievements">
         <Achievements />

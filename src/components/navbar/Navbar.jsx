@@ -70,6 +70,14 @@ export default function Navbar() {
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
         </motion.a>
         <motion.a
+          href="#experience"
+          whileHover={{ scale: 1.1 }}
+          className="relative cursor-pointer hover:text-yellow-500 transition-colors duration-300 group"
+        >
+          Experience
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+        </motion.a>
+        <motion.a
           href="#education"
           whileHover={{ scale: 1.1 }}
           className="relative cursor-pointer hover:text-yellow-500 transition-colors duration-300 group"
@@ -127,19 +135,26 @@ export default function Navbar() {
                 Skills
               </a>
               <a
+                href="#experience"
+                className="nav hover:text-yellow-500 cursor-pointer transition-colors duration-300"
+                onClick={() => setOpenNav(false)}
+              >
+                Experience
+              </a>
+              <a
                 href="#education"
                 className="nav hover:text-yellow-500 cursor-pointer transition-colors duration-300"
                 onClick={() => setOpenNav(false)}
               >
                 Education
               </a>
-              <a
+              {/* <a
                 href="#projects"
                 className="nav hover:text-yellow-500 cursor-pointer transition-colors duration-300"
                 onClick={() => setOpenNav(false)}
               >
                 Projects
-              </a>
+              </a> */}
               <a
                 href="#contact"
                 className="nav hover:text-yellow-500 cursor-pointer transition-colors duration-300"

@@ -59,7 +59,7 @@ const AchievementSection = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-8"
+        className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-8"
       >
         {achievements.map((achievement, index) => (
           <motion.div

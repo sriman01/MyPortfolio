@@ -2,36 +2,34 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  // Programming Languages
+  // Languages
   { name: "C++", level: 60, category: "Language", color: "from-blue-500 to-blue-700" },
   { name: "JavaScript", level: 65, category: "Language", color: "from-yellow-400 to-yellow-600" },
   { name: "Python", level: 50, category: "Language", color: "from-green-500 to-green-700" },
   { name: "TypeScript", level: 70, category: "Language", color: "from-blue-400 to-blue-600" },
+  { name: "Java", level: 50, category: "Language", color: "from-orange-500 to-orange-700" },
+  { name: "SQL", level: 60, category: "Language", color: "from-blue-500 to-blue-700" },
+  { name: "Node.js", level: 60, category: "Language", color: "from-green-500 to-green-700" },
   
-  // Frontend
-  { name: "React", level: 80, category: "Frontend", color: "from-cyan-400 to-cyan-600" },
-  { name: "React Native", level: 30, category: "Frontend", color: "from-cyan-400 to-cyan-600" },
-  // { name: "Redux Toolkit", level: , category: "Frontend", color: "from-purple-500 to-purple-700" },
-  { name: "Tailwind CSS", level: 85, category: "Frontend", color: "from-teal-400 to-teal-600" },
-  { name: "CSS", level: 80, category: "Frontend", color: "from-blue-400 to-blue-600" },
+  // Framework/Library
+  { name: "Next.js", level: 70, category: "Framework/Library", color: "from-gray-700 to-black" },
+  { name: "Remix.js", level: 80, category: "Framework/Library", color: "from-blue-800 to-purple-800" },
+  { name: "React", level: 80, category: "Framework/Library", color: "from-cyan-400 to-cyan-600" },
+  { name: "React Native", level: 30, category: "Framework/Library", color: "from-cyan-400 to-cyan-600" },
+  { name: "Express.js", level: 75, category: "Framework/Library", color: "from-gray-500 to-gray-700" },
+  { name: "Spring Boot", level: 70, category: "Framework/Library", color: "from-green-600 to-green-800" },
+  { name: "Tailwind CSS", level: 85, category: "Framework/Library", color: "from-teal-400 to-teal-600" },
+  { name: "CSS", level: 80, category: "Framework/Library", color: "from-blue-400 to-blue-600" },
+  { name: "MongoDB", level: 60, category: "Framework/Library", color: "from-green-400 to-green-600" },
   
-  // Backend
-  { name: "Node.js", level: 60, category: "Backend", color: "from-green-500 to-green-700" },
-  { name: "Express.js", level: 75, category: "Backend", color: "from-gray-500 to-gray-700" },
-  { name: "Spring Boot", level: 70, category: "Backend", color: "from-green-600 to-green-800" },
-  
-  // Databases
-  { name: "MongoDB", level: 60, category: "Database", color: "from-green-400 to-green-600" },
-  { name: "SQL", level: 60, category: "Database", color: "from-blue-500 to-blue-700" },
-  
-  // DevOps & Cloud
-  { name: "Docker", level: 80, category: "DevOps", color: "from-blue-500 to-blue-700" },
-  { name: "AWS", level: 50, category: "DevOps", color: "from-orange-500 to-orange-700" },
-  { name: "Nginx", level: 60, category: "DevOps", color: "from-green-600 to-green-800" },
-  { name: "Git & GitHub", level: 80, category: "DevOps", color: "from-purple-500 to-purple-700" },
+  // Tools
+  { name: "Docker", level: 80, category: "Tools", color: "from-blue-500 to-blue-700" },
+  { name: "AWS", level: 50, category: "Tools", color: "from-orange-500 to-orange-700" },
+  { name: "Nginx", level: 60, category: "Tools", color: "from-green-600 to-green-800" },
+  { name: "Git & GitHub", level: 80, category: "Tools", color: "from-purple-500 to-purple-700" },
 ];
 
-const categories = ["All", "Language", "Frontend", "Backend", "Database", "DevOps"];
+const categories = ["All", "Language", "Framework/Library", "Tools"];
 
 const Skill = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("All");

@@ -17,7 +17,7 @@ const Education = () => {
       icon: <SchoolIcon className="w-8 h-8" />,
       degree: "Intermediate",
       institution: "IGSI College, Mandu",
-      field: "Science Stream (PCM)",
+      field: "PCM with Computer Science",
       grade: "Percentage: 81.6%",
       period: "2018 - 2020",
       description: "Completed higher secondary education with focus on Physics, Chemistry, and Mathematics"

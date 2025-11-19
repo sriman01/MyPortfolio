@@ -6,36 +6,28 @@ import LaunchIcon from '@mui/icons-material/Launch';
 const Projects = () => {
   const projects = [
     {
-      imageUrl: "/project-3.png",
-      projectName: "Realtime Weather App",
-      description: "A real-time weather application with beautiful UI and accurate weather data",
-      tech: ["React", "API", "Tailwind CSS"],
-      githubLink: "https://github.com/sriman01/weatherApp",
-      deployLink: "https://sriman-weatherapp.netlify.app/"
-    },
-    {
       imageUrl: "/project-1.png",
-      projectName: "SHOP|MART - E-Commerce",
-      description: "Full-featured e-commerce platform with shopping cart and checkout",
-      tech: ["React", "Redux", "API"],
-      githubLink: "https://github.com/sriman01/shop-mart",
-      deployLink: "https://exquisite-rolypoly-8ab6bc.netlify.app/"
+      projectName: "Formulafun",
+      description: "Responsive e-commerce platform with modern UI, SVG animations, cart management, secure payment processing, and Payload CMS integration for real-time content management",
+      tech: ["Next.js", "Payload CMS", "Tailwind", "PostgreSQL"],
+      githubLink: "#",
+      deployLink: "#"
     },
     {
       imageUrl: "/project-2.png",
-      projectName: "Pizza Site UI",
-      description: "Modern and responsive pizza ordering website with interactive design",
-      tech: ["React", "CSS", "JavaScript"],
-      githubLink: "https://github.com/sriman01/Pizza-site",
-      deployLink: "https://sriman-pizza-site.netlify.app/"
+      projectName: "Ampere",
+      description: "Fully responsive EV scooter venture website with location-based showroom finder, EMI calculator, processing 1,000+ test ride bookings and 2,000+ daily visits",
+      tech: ["Remix.js", "React.js", "Tailwind", "PostgreSQL", "TypeScript"],
+      githubLink: "#",
+      deployLink: "#"
     },
     {
-      imageUrl: "/project-4.png",
-      projectName: "Todo List App",
-      description: "Productive task management application with local storage",
-      tech: ["React", "LocalStorage", "CSS"],
-      githubLink: "https://github.com/sriman01/todo",
-      deployLink: "https://todo-sriman.netlify.app/"
+      imageUrl: "/project-3.png",
+      projectName: "Drag & Drop Website Builder",
+      description: "A desktop web app supporting infinite drag-and-drop for creating custom websites. Instantly generate production-ready code for your site by simply dragging and dropping components—no coding required",
+      tech: ["Remix", "React", "TypeScript", "React DnD", "Tailwind CSS"],
+      githubLink: "https://github.com/sriman01/InfiniDrop",
+      deployLink: "#"
     },
     {
       imageUrl: "/project-5.png",
