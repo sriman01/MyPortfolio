@@ -3,33 +3,62 @@ import { motion } from "framer-motion";
 
 const skills = [
   // Languages
-  { name: "C++", level: 60, category: "Language", color: "from-blue-500 to-blue-700" },
-  { name: "JavaScript", level: 65, category: "Language", color: "from-yellow-400 to-yellow-600" },
-  { name: "Python", level: 50, category: "Language", color: "from-green-500 to-green-700" },
-  { name: "TypeScript", level: 70, category: "Language", color: "from-blue-400 to-blue-600" },
-  { name: "Java", level: 50, category: "Language", color: "from-orange-500 to-orange-700" },
-  { name: "SQL", level: 60, category: "Language", color: "from-blue-500 to-blue-700" },
-  { name: "Node.js", level: 60, category: "Language", color: "from-green-500 to-green-700" },
+  { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/00599C", category: "Language", color: "from-blue-500 to-blue-700" },
+  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E", category: "Language", color: "from-yellow-400 to-yellow-600" },
+  { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB", category: "Language", color: "from-green-500 to-green-700" },
+  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6", category: "Language", color: "from-blue-400 to-blue-600" },
+  { name: "Java", icon: "https://cdn-icons-png.flaticon.com/512/226/226777.png", category: "Language", color: "from-orange-500 to-orange-700" },
+  { name: "SQL", icon: "https://cdn.simpleicons.org/mysql/4479A1", category: "Language", color: "from-blue-500 to-blue-700" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933", category: "Language", color: "from-green-500 to-green-700" },
   
   // Framework/Library
-  { name: "Next.js", level: 70, category: "Framework/Library", color: "from-gray-700 to-black" },
-  { name: "Remix.js", level: 80, category: "Framework/Library", color: "from-blue-800 to-purple-800" },
-  { name: "React", level: 80, category: "Framework/Library", color: "from-cyan-400 to-cyan-600" },
-  { name: "React Native", level: 30, category: "Framework/Library", color: "from-cyan-400 to-cyan-600" },
-  { name: "Express.js", level: 75, category: "Framework/Library", color: "from-gray-500 to-gray-700" },
-  { name: "Spring Boot", level: 70, category: "Framework/Library", color: "from-green-600 to-green-800" },
-  { name: "Tailwind CSS", level: 85, category: "Framework/Library", color: "from-teal-400 to-teal-600" },
-  { name: "CSS", level: 80, category: "Framework/Library", color: "from-blue-400 to-blue-600" },
-  { name: "MongoDB", level: 60, category: "Framework/Library", color: "from-green-400 to-green-600" },
+  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/000000", category: "Framework/Library", color: "from-gray-700 to-black" },
+  { name: "Remix.js", icon: "https://cdn.simpleicons.org/remix/000000", category: "Framework/Library", color: "from-blue-800 to-purple-800" },
+  { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB", category: "Framework/Library", color: "from-cyan-400 to-cyan-600" },
+  { name: "React Native", icon: "https://cdn.simpleicons.org/react/61DAFB", category: "Framework/Library", color: "from-cyan-400 to-cyan-600" },
+  { name: "Express.js", icon: "https://cdn.simpleicons.org/express/000000", category: "Framework/Library", color: "from-gray-500 to-gray-700" },
+  { name: "Spring Boot", icon: "https://cdn.simpleicons.org/spring/6DB33F", category: "Framework/Library", color: "from-green-600 to-green-800" },
+  { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4", category: "Framework/Library", color: "from-teal-400 to-teal-600" },
+  { name: "CSS", icon: "https://imgs.search.brave.com/WNztbPjzoOpVpQ10NFAiWmf5I6GtJ4ahDJd1ZebkbzM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni85OTE0Lzk5MTQ0/ODUucG5nP3NlbXQ9/YWlzX3doaXRlX2xh/YmVs", category: "Framework/Library", color: "from-blue-400 to-blue-600" },
+  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248", category: "Database", color: "from-green-400 to-green-600" },
+  { name: "Postgres", icon: "https://cdn-icons-png.flaticon.com/128/5968/5968342.png", category: "Database", color: "from-green-400 to-green-600" },
   
   // Tools
-  { name: "Docker", level: 80, category: "Tools", color: "from-blue-500 to-blue-700" },
-  { name: "AWS", level: 50, category: "Tools", color: "from-orange-500 to-orange-700" },
-  { name: "Nginx", level: 60, category: "Tools", color: "from-green-600 to-green-800" },
-  { name: "Git & GitHub", level: 80, category: "Tools", color: "from-purple-500 to-purple-700" },
+  { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED", category: "Tools", color: "from-blue-500 to-blue-700" },
+  { name: "AWS", icon: "https://logos-world.net/wp-content/uploads/2021/08/Amazon-Web-Services-AWS-Logo.png", category: "Tools", color: "from-orange-500 to-orange-700" },
+  { name: "Nginx", icon: "https://cdn.simpleicons.org/nginx/009639", category: "Tools", color: "from-green-600 to-green-800" },
+  { name: "Git & GitHub", icon: "https://cdn.simpleicons.org/github/181717", category: "Tools", color: "from-purple-500 to-purple-700" },
 ];
 
-const categories = ["All", "Language", "Framework/Library", "Tools"];
+const categories = ["All", "Language", "Framework/Library", "Tools" , "Database"];
+
+const SkillCard = ({ skill, variants, idx }) => {
+  const [imgError, setImgError] = React.useState(false);
+  
+  return (
+    <motion.div
+      variants={variants}
+      whileHover={{ scale: 1.05, y: -10 }}
+      className="card-hover glass-effect rounded-2xl p-6 border border-yellow-500/20 flex flex-col items-center justify-center gap-4"
+    >
+      <div className={`w-16 h-16 rounded-full bg-white/10 flex items-center justify-center p-3`}>
+        {!imgError ? (
+          <img 
+            src={skill.icon} 
+            alt={skill.name}
+            className="w-full h-full object-contain"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <div className={`w-full h-full rounded-full bg-gradient-to-r ${skill.color} flex items-center justify-center text-white text-xl font-bold`}>
+            {skill.name.charAt(0)}
+          </div>
+        )}
+      </div>
+      <h3 className="text-lg font-bold text-white text-center">{skill.name}</h3>
+    </motion.div>
+  );
+};
 
 const Skill = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("All");
@@ -110,40 +139,7 @@ const Skill = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
       >
         {filteredSkills.map((skill, idx) => (
-          <motion.div
-            key={idx}
-            variants={itemVariants}
-            whileHover={{ scale: 1.05, y: -10 }}
-            className="card-hover glass-effect rounded-2xl p-6 border border-yellow-500/20"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-bold text-white">{skill.name}</h3>
-              <span className="text-sm text-yellow-500 font-semibold">{skill.level}%</span>
-            </div>
-            
-            <div className="mb-2">
-              <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1, delay: idx * 0.1 }}
-                  className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
-                />
-              </div>
-            </div>
-            
-            <div className="flex items-center justify-between text-xs text-gray-400">
-              <span>{skill.category}</span>
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: idx * 0.1 + 0.5 }}
-                className="text-yellow-500"
-              >
-                {skill.level >= 85 ? "Expert" : skill.level >= 70 ? "Advanced" : "Intermediate"}
-              </motion.span>
-            </div>
-          </motion.div>
+          <SkillCard key={idx} skill={skill} variants={itemVariants} idx={idx} />
         ))}
       </motion.div>
     </div>
@@ -151,3 +147,4 @@ const Skill = () => {
 };
 
 export default Skill;
+

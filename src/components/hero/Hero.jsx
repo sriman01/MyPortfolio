@@ -80,7 +80,7 @@ export default function Hero() {
 
                     <motion.div
                         variants={itemVariants}
-                        className="text-3xl md:text-5xl lg:text-7xl font-extrabold"
+                        className="text-3xl lg:text-5xl 2xl:text-7xl font-extrabold"
                     >
                         I&apos;m <span className="gradient-text">{name}</span>
                         <span className="inline-block w-1 h-10 md:h-16 bg-yellow-500 ml-2 animate-pulse"></span>
